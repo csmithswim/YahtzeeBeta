@@ -8,6 +8,8 @@ public class Dice {
 
     public void rollDice(int numberOfDice){
 
+
+
         for (int i = 0; i <= numberOfDice; i++){
 
             double rand = Math.random()*numberOfDice;
