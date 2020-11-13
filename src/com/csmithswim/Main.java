@@ -7,37 +7,38 @@ public class Main {
 
     public static void main(String[] args) {
         boolean play = true;
-
-        while (play == true){
-            Game game1 = new Game();
-            System.out.println("Welcome To Career Dev's Yahtzee, type 'start' to begin a new game");
+        String removeRoll="remove";
+        while (play){
+            Dice dice1 = new Dice();
+            System.out.println("Welcome To Career Dev's Yahtzee, type 'start' to begin a new game.");
             Scanner scan = new Scanner(System.in);
             String firstRoll = scan.next();
 
             if (firstRoll.equals("start")) {
-                game1.rollDice(5);
+                dice1.rollAllDice();
+                System.out.println("Type 'roll' to re-roll or 'remove' to remove selected dice");
                 String secondRoll = scan.next();
-                if (secondRoll.equals("roll")) {
-                    game1.rollDice(5);
-                    String thirdRoll = scan.next();
+                if (secondRoll.equals("remove")) {
+                    System.out.println("Enter specific dice to be removed, i.e. 024 to remove the first, third and fifth dice.");
+                    System.out.println("Enter Dice To Be Removed:");
+                    String nextLine = scan.nextLine();
+                    String diceToRemove = scan.nextLine();
+                    dice1.removeSelectedDice(diceToRemove);
+                    System.out.println("Type roll to roll your second time.");
+
                 }
-                return;
+                else if (secondRoll.equals("roll")) {
+                    dice1.rollAllDice();
+                    String thirdRoll = scan.next();
+                    if (thirdRoll.equals("roll")){
+                        dice1.rollAllDice();
+                    }
+                }
+            return;
             }
         }
     }
-
 }
 
 
 
-//            for (int i = 0; i <= numberOfDice; i++){
-//
-//            double rand = Math.random()*numberOfDice;
-//            int iRand;
-//            iRand = (int)rand;
-//            roll.add(iRand);
-//            }
-//
-//            System.out.println(roll);
-//
-//
