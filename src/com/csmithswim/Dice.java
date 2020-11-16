@@ -65,7 +65,12 @@ public class Dice {
         System.out.println("\nYou have " + (counter-1) + " rolls left.");
         counter--;
         currentRoll = roll;
-        System.out.println("Type 'roll' to re-roll or 'keep' to keep selected dice.\n");
+        System.out.println("Type 'roll' to re-roll. \nIf you want to keep some dice, first input 'keep' followed by enter then followed by the specific dice you want keep.");
+
+        System.out.println("This game uses an index based number(s) as input to decide which dice you want to keep. For example, 01 means you are keeping the first and second " +
+                "dice" +
+                " " +
+                "displayed left to right.\n");
     }
 
     public void introMessage(){
