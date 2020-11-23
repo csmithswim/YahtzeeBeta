@@ -30,16 +30,14 @@ public class Hand {
         }
     }
     public void checkYahtzee(){
-        int yahtzee=0;
+//        System.out.println(dice.toString());
             for (var die : dice){
-                if(die==dice){
-                    yahtzee++;
-                }
+//                System.out.println(dice.get(0));
+                System.out.println(die.equals(dice.get(0)));
+//                if (!die.equals(dice)){
+//                    System.out.println("YAHTZEE!");
+//                }
             }
-
-        if (yahtzee==5){
-            System.out.println("Yahtzee!");}
-         else {System.out.println("Sorry no Yahtzee, thanks for playing.");}
     }
 
     //Printing die to screen
