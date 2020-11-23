@@ -30,14 +30,21 @@ public class Hand {
         }
     }
     public void checkYahtzee(){
-//        System.out.println(dice.toString());
+         List<Integer> yahtzee = new ArrayList<>();
+         int yahtzeeCount = 0;
+
             for (var die : dice){
-//                System.out.println(dice.get(0));
-                System.out.println(die.equals(dice.get(0)));
-//                if (!die.equals(dice)){
-//                    System.out.println("YAHTZEE!");
-//                }
+                yahtzee.add(die.getValue());
             }
+
+            for (var yahtzeeDie : yahtzee){
+                if (yahtzeeDie.equals(yahtzee.get(0))) {
+                    yahtzeeCount++;
+                }
+            }
+        if (yahtzeeCount==5){
+            System.out.println("YAHTZEE!!!!!!!");
+        }
     }
 
     //Printing die to screen
