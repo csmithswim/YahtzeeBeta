@@ -1,2 +1,1 @@
-
-[]Migrate Dice class to Hand and Console class.
+[]Put in try/catch blocks to catch exceptions.
